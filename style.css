@@ -1,0 +1,247 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+.hero {
+  background-color: #ecf0f6;
+  box-sizing: border-box;
+  width: 90vw;
+  height: auto;
+}
+.kiri h1 {
+  font-weight: bold;
+  line-height: 1.4em;
+  letter-spacing: 1px;
+}
+
+.kanan img {
+  width: 500px;
+  height: auto;
+  height: auto;
+  margin-bottom: -50px;
+}
+.rent-buy-sell {
+  position: absolute;
+  bottom: 60px;
+  opacity: 0.8;
+  width: 55%;
+  z-index: 9;
+}
+.rent,
+.buy,
+.sell {
+  background-color: #fbfdff;
+  margin-left: 1px;
+}
+.country {
+  width: 90vw;
+}
+.country-card {
+  width: 200px;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  letter-spacing: 0.5em;
+  font-size: 1.1em;
+  box-shadow: 5px 10px 15px #dedfe0;
+  cursor: pointer;
+}
+.country-card:hover {
+  box-shadow: 5px 10px 15px #a9a9aa;
+  transform: scale(1.08);
+}
+.spain {
+  background-image: url(assets/spain.jpg);
+}
+.japan {
+  background-image: url(assets/japan.jpg);
+}
+.tiongkok {
+  background-image: url(assets/chinese.jpg);
+}
+.singapore {
+  background-image: url(assets/singapore.jpg);
+}
+.country-card img {
+  width: inherit;
+  height: inherit;
+}
+.country h2 {
+  line-height: 1.4em;
+}
+
+.recently {
+  width: 90vw;
+}
+.recently-header {
+  width: inherit;
+}
+.list-home {
+  width: 80vw;
+}
+.card-home {
+  height: auto;
+  box-sizing: border-box;
+  box-shadow: 5px 10px 15px #dedfe0;
+}
+.card-home img {
+  width: 120px;
+  height: 150px;
+}
+.testimoni {
+  background-color: #ecf0f6;
+}
+.box-testi {
+  width: 80vw;
+}
+.image-client {
+  background-color: #ecf0f6;
+  width: 80px;
+  height: 80px;
+  border: 1px solid transparent;
+  border-radius: 100%;
+}
+.image-client img {
+  width: 100%;
+  height: auto;
+  border: 1px solid transparent;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.card {
+  box-shadow: 5px 10px 15px #dedfe0;
+  cursor: pointer;
+  width: 12rem;
+}
+.card-body {
+  height: 150px;
+}
+footer {
+  background-color: #ecf0f6;
+}
+.box-contact {
+  width: 80vw;
+  height: auto;
+  box-shadow: 2px 2px 30px #a7a7a7;
+}
+.company ul,
+.legal ul,
+.resource ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0; /* Mulai tersembunyi */
+  transform: translateY(20px); /* Mulai sedikit ke bawah */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fade-up.show {
+  animation: fadeUp 1s ease-in-out forwards;
+}
+
+.fade-up {
+  display: inline-block;
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-right {
+  opacity: 0; /* Mulai tersembunyi */
+  transform: translateX(-20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.fade-right.show {
+  opacity: 0;
+  animation: fadeRight 1s ease forwards;
+}
+
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-left {
+  opacity: 0; /* Mulai tersembunyi */
+  transform: translateX(20px); /* Mulai dari luar layar ke kanan */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fade-left.show {
+  opacity: 0;
+  animation: fadeLeft 1s ease forwards;
+}
+
+@media only screen and (max-width: 800px) {
+  .kanan img {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    height: inherit;
+    margin-bottom: 1px;
+  }
+  .rent-buy-sell {
+    position: absolute;
+    opacity: 0.8;
+    width: 90%;
+    z-index: 9;
+    left: 5px;
+  }
+  #rent-tab,
+  #buy-tab,
+  #sell-tab {
+    font-weight: bold;
+  }
+  .country {
+    width: 100vw;
+  }
+  .country-card {
+    width: 120px;
+    height: 150px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+  .country-card img {
+    width: inherit;
+    height: inherit;
+  }
+  .country h2 {
+    line-height: 1.4em;
+  }
+  .card-home img {
+    width: inherit;
+    height: 150px;
+  }
+
+  .card {
+    width: 20rem;
+
+  }
+}

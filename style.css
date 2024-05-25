@@ -48,7 +48,7 @@ body {
 }
 .country-card:hover {
   box-shadow: 5px 10px 15px #a9a9aa;
-  transform: scale(2);
+  scale: 1.1;
 }
 .spain {
   background-image: url(assets/spain.jpg);
@@ -132,11 +132,11 @@ footer {
 }
 
 @keyframes fadeUp {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(20px);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -157,11 +157,11 @@ footer {
 }
 
 @keyframes fadeRight {
-  0% {
+  from {
     opacity: 0;
     transform: translateX(100%);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateX(0);
   }
@@ -178,11 +178,11 @@ footer {
 }
 
 @keyframes fadeLeft {
-  0% {
+  from {
     opacity: 0;
     transform: translateX(-100%);
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateX(0);
   }

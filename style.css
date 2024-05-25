@@ -48,7 +48,7 @@ body {
 }
 .country-card:hover {
   box-shadow: 5px 10px 15px #a9a9aa;
-  transform: scale(1.08);
+  transform: scale(2);
 }
 .spain {
   background-image: url(assets/spain.jpg);
@@ -235,13 +235,14 @@ footer {
   .country h2 {
     line-height: 1.4em;
   }
+}
+
+@media only screen and (max-width: 400px) {
+  .card {
+    width: 20rem;
+  }
   .card-home img {
     width: inherit;
     height: 150px;
-  }
-
-  .card {
-    width: 20rem;
-
   }
 }

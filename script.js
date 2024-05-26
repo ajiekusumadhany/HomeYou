@@ -3,32 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const fadeRightElements = document.querySelectorAll(".fade-right");
   const fadeLeftElements = document.querySelectorAll(".fade-left");
 
-  function checkFadeUp() {
-    fadeUpElements.forEach((element) => {
-      const elementTop = element.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-
-      if (elementTop < windowHeight * 0.75) {
-        element.classList.add("show");
-      } else {
-        element.classList.remove("show");
-      }
-    });
-  }
-  function checkFadeRight() {
-    fadeRightElements.forEach((element) => {
-      const elementTop = element.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-
-      if (elementTop < windowHeight * 0.75) {
-        element.classList.add("show");
-      } else {
-        element.classList.remove("show");
-      }
-    });
-  }
-  function checkFadeLeft() {
-    fadeLeftElements.forEach((element) => {
+  function checkVisibility(elements) {
+    elements.forEach((element) => {
       const elementTop = element.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
 
@@ -40,11 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  window.addEventListener("scroll", checkFadeUp);
-  window.addEventListener("resize", checkFadeUp);
-  window.addEventListener("scroll", checkFadeRight);
-  window.addEventListener("resize", checkFadeRight);
-  window.addEventListener("scroll", checkFadeLeft);
-  window.addEventListener("resize", checkFadeLeft);
-  checkFadeUp();
+  function handleScrollAndResize() {
+    checkVisibility(fadeUpElements);
+    checkVisibility(fadeRightElements);
+    checkVisibility(fadeLeftElements);
+  }
+
+  window.addEventListener("scroll", handleScrollAndResize);
+  window.addEventListener("resize", handleScrollAndResize);
+
+  // Initial check to show elements on load
+  handleScrollAndResize();
 });
+

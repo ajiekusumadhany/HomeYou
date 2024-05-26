@@ -28,4 +28,3 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial check to show elements on load
   handleScrollAndResize();
 });
-
